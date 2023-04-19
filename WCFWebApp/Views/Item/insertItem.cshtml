@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "insertItem";
+}
+
+<br/>
+<br/>
+<h2>Insert Item</h2>
+
+<form method="post" action="@Url.Action("insertItem")">
+    Id:<input type="text" name="iid" class="form-control form-control" />
+    Name:<input type="text" name="iName" class="form-control form-control" />
+    Quantity:<input type="number" name="iQuantity" class="form-control form-control"  />
+    Price:<input type="number" name="iDesc" class="form-control form-control"  /><br/>
+    <input type="submit" value="Insert" />
+</form>

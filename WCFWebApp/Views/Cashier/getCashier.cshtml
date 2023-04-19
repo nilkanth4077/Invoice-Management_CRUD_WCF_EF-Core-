@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "getCashier";
+}
+
+<br />
+<br />
+<h2>Users</h2>
+
+<table border="1" class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Role</th>
+        </tr>
+    </thead>
+    @foreach (var ca in ViewBag.List)
+    {
+<tbody>
+    <tr>
+        <th scope="row">@ca.cid</th>
+        <td>@ca.cName</td>
+        <td>@ca.cRole</td>
+    </tr>
+</tbody>
+    }
+</table>
+<br/>
+<div>
+    @Html.ActionLink("Insert User", "insertCashier", "Cashier", new { area = "" }, new { @class = "navbar-brand border p-2 mb-2 bg-dark text-white rounded" }) &nbsp;
+    @Html.ActionLink("Update User", "updateCashier", "Cashier", new { area = "" }, new { @class = "navbar-brand border p-2 mb-2 bg-dark text-white rounded" }) &nbsp;
+    @Html.ActionLink("Delete User", "deleteCashier", "Cashier", new { area = "" }, new { @class = "navbar-brand border p-2 mb-2 bg-dark text-white rounded" })
+</div>
+<br/>

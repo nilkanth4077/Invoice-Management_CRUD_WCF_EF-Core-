@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "updateCashier";
+}
+
+<br />
+<br />
+<h2>Update User Details</h2>
+
+<form method="post" action="@Url.Action("updateCashier")">
+    Id:<input type="text" name="cid" class="form-control form-control" />
+    Name:<input type="text" name="cName" class="form-control form-control"/>
+    Role:<input type="text" name="cRole" class="form-control form-control"/><br/>
+    <input type="submit" value="Update" />
+</form>

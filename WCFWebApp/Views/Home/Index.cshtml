@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<br/>
+<h2>Generate Invoice</h2>
+
+<form method="post"><br/>
+                    <div class="container border rounded-4 bg-dark text-white">
+                        <div class="row py-5 px-2">
+                            <div class="col">
+                                Name: <input type="text" name="name" class="form-control form-control" /><br />
+                                Mobile: <input type="text" name="mobile" class="form-control form-control" /><br />
+                                E-mail: <input type="email" name="email" class="form-control form-control" />
+                            </div>
+                            <div class="col">
+                                Item:<br /> @Html.DropDownList("DropDownList", ViewBag.DropDownList as SelectList, "Select Item")<br /><br />
+                                Quantity: <input type="number" name="quantity" class="form-control form-control" /><br />
+                                Price: <input type="number" name="price" class="form-control form-control" />
+                            </div>
+                        </div>
+                    </div>
+    <br/>
+    <input type="submit" value="Add In List" class="bg-dark text-white border rounded p-2" />
+</form>
+<br/>
